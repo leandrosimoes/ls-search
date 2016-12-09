@@ -91,6 +91,8 @@ searchInput.ls_search.close('string to search');
 
 ## TODO
 
+* Create bower package
+* Create nuget package
 * Customizable search parameters
 * Multiple filters
 * Destroy method
