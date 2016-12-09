@@ -9,14 +9,14 @@ A multiple search and filter plugin made with pure vanilla javascript with full 
 Just download and link into your page this assets:
 
 ### CSS:
-[ls-search.css]('https://raw.githubusercontent.com/leandrosimoes/ls-search/master/src/assets/css/ls-search.css')
+[ls-search.css](https://raw.githubusercontent.com/leandrosimoes/ls-search/master/src/assets/css/ls-search.css)
 or
-[ls-search.min.css]('https://raw.githubusercontent.com/leandrosimoes/ls-search/master/src/assets/css/ls-search.min.css')
+[ls-search.min.css](https://raw.githubusercontent.com/leandrosimoes/ls-search/master/src/assets/css/ls-search.min.css)
 
 ### Javascript:
-[ls-search.js]('https://raw.githubusercontent.com/leandrosimoes/ls-search/master/src/assets/js/ls-search.es5.js')
+[ls-search.js](https://raw.githubusercontent.com/leandrosimoes/ls-search/master/src/assets/js/ls-search.es5.js)
 or
-[ls-search.min.js]('https://raw.githubusercontent.com/leandrosimoes/ls-search/master/src/assets/css/ls-search.es5.min.js')
+[ls-search.min.js](https://raw.githubusercontent.com/leandrosimoes/ls-search/master/src/assets/css/ls-search.es5.min.js)
 
 ## How it works?
 
@@ -104,4 +104,4 @@ Just send pull requests on `develop` branch
 
 ## Sugestions
 
-Open an issue or just mail me on [leandro.simoes@outlook.com]('mailto:leandro.simoes@outlook.com')
+Open an issue or just mail me on [leandro.simoes@outlook.com](mailto:leandro.simoes@outlook.com)
