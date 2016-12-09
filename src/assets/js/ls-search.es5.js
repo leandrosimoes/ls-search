@@ -1,4 +1,6 @@
-﻿;(function (window, document) {
+﻿'use strict';
+
+;(function (window, document) {
     "use strict";
 
     var eventsTrigger = [],

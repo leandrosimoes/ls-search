@@ -6,5 +6,9 @@
   {
     "outputFile": "sample/style.css",
     "inputFile": "sample/style.less"
+  },
+  {
+    "outputFile": "src/assets/js/ls-search.es5.js",
+    "inputFile": "src/assets/js/ls-search.js"
   }
 ]
