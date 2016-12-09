@@ -91,8 +91,6 @@ searchInput.ls_search.close('string to search');
 
 ## TODO
 
-* Create NPM package
-* Put usefull labels in this README
 * Customizable search parameters
 * Multiple filters
 * Destroy method
