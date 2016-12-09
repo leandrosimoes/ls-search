@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "src/assets/css/ls-search.css",
+    "inputFile": "src/assets/css/ls-search.less"
+  },
+  {
+    "outputFile": "sample/style.css",
+    "inputFile": "sample/style.less"
+  }
+]

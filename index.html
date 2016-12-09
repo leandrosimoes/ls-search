@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>LS Search Sample</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <link href="src/assets/css/ls-search.min.css" rel="stylesheet">
+
+    <link href="sample/style.min.css" rel="stylesheet">
+    <script type="text/javascript" src="src/assets/js/ls-search.js"></script>
+</head>
+<body>
+    <section id="main">
+        <input id="input-ls-search" type="text" value="" placeholder="Type here to search and filter!" />
+        <div class="filter-sample-area">
+            <h5>Sample of filtering:</h5>
+            <div class="filter-item">New York</div>
+            <div class="filter-item">Rio de Janeiro</div>
+            <div class="filter-item">Tokio</div>
+            <div class="filter-item">São Paulo</div>
+            <div class="filter-item">Los Angeles</div>
+            <div class="filter-item">Las Vegas</div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        var searchInput = document.getElementById('input-ls-search');
+
+        ls_search({
+            element: document.getElementById('input-ls-search'),
+            //minInputLength: 3,
+            engines: [{
+                name: 'NAMES',
+                url: 'sample/names.json',
+                method: 'GET',
+                template: '<div class="ls-search-sample-result-area">' +
+                            '<div class="ls-search-sample-title">Names founded</div>' +
+                            '<div id="names-item-area" class="ls-search-sample-item-area"></div>' +
+                            '<div id="names-no-item-area" class="ls-search-sample-no-item-area">No results</div>' +
+                          '</div>',
+                formatResult: function (result) {
+                    var data = JSON.parse(result).data;
+
+                    var areaItems = document.querySelector("div#names-item-area"),
+                        areaNoItems = document.querySelector("div#names-no-item-area");
+
+                    var founded = false;
+                    for (var i = 0; i < data.length; i++) {
+                        if (!!data[i].title && data[i].title.toLowerCase().indexOf(searchInput.value.toLowerCase()) > -1) {
+                            founded = true;
+
+                            var newElement = document.createElement('div');
+
+                            newElement.className = 'ls-search-sample-item';
+                            newElement.innerText = data[i].title;
+
+                            areaItems.appendChild(newElement);
+                        }
+                    }
+
+                    if (!!founded) {
+                        areaItems.style.display = "block";
+                        areaNoItems.style.display = "none";
+                    } else {
+                        areaItems.style.display = "none";
+                        areaNoItems.style.display = "block";
+                    }
+                }
+            },
+            {
+                name: 'FOODS',
+                url: 'sample/foods.json',
+                method: 'GET',
+                template: '<div class="ls-search-sample-result-area">' +
+                            '<div class="ls-search-sample-title">Foods founded</div>' +
+                            '<div id="foods-item-area" class="ls-search-sample-item-area"></div>' +
+                            '<div id="foods-no-item-area" class="ls-search-sample-no-item-area">No results</div>' +
+                          '</div>',
+                formatResult: function (result) {
+                    var data = JSON.parse(result).data;
+
+                    var areaItems = document.querySelector("div#foods-item-area"),
+                        areaNoItems = document.querySelector("div#foods-no-item-area");
+
+                    var founded = false;
+                    for (var i = 0; i < data.length; i++) {
+                        if (!!data[i].title && data[i].title.toLowerCase().indexOf(searchInput.value.toLowerCase()) > -1) {
+                            founded = true;
+
+                            var newElement = document.createElement('div');
+
+                            newElement.className = 'ls-search-sample-item';
+                            newElement.innerText = data[i].title;
+
+                            areaItems.appendChild(newElement);
+                        }
+                    }
+
+                    if (!!founded) {
+                        areaItems.style.display = "block";
+                        areaNoItems.style.display = "none";
+                    } else {
+                        areaItems.style.display = "none";
+                        areaNoItems.style.display = "block";
+                    }
+                }
+            },
+            {
+                name: 'DRINKS',
+                url: 'sample/drinks.json',
+                method: 'GET',
+                template: '<div class="ls-search-sample-result-area">' +
+                            '<div class="ls-search-sample-title">Drinks founded</div>' +
+                            '<div id="drinks-item-area" class="ls-search-sample-item-area"></div>' +
+                            '<div id="drinks-no-item-area" class="ls-search-sample-no-item-area">No results</div>' +
+                          '</div>',
+                formatResult: function (result) {
+                    var data = JSON.parse(result).data;
+
+                    var areaItems = document.querySelector("div#drinks-item-area"),
+                        areaNoItems = document.querySelector("div#drinks-no-item-area");
+
+                    var founded = false;
+                    for (var i = 0; i < data.length; i++) {
+                        if (!!data[i].title && data[i].title.toLowerCase().indexOf(searchInput.value.toLowerCase()) > -1) {
+                            founded = true;
+
+                            var newElement = document.createElement('div');
+
+                            newElement.className = 'ls-search-sample-item';
+                            newElement.innerText = data[i].title;
+
+                            areaItems.appendChild(newElement);
+                        }
+                    }
+
+                    if (!!founded) {
+                        areaItems.style.display = "block";
+                        areaNoItems.style.display = "none";
+                    } else {
+                        areaItems.style.display = "none";
+                        areaNoItems.style.display = "block";
+                    }
+                }
+            }]
+        });
+
+        searchInput.ls_search.setPriorities(['DRINKS', 'NAMES', 'FOODS']);
+
+        searchInput.ls_search.setFilter(function () {
+            var rows = document.querySelectorAll('div.filter-item');
+
+            for (var i = 0; i < rows.length; i++) {
+                if (rows[i].innerText.toLowerCase().indexOf(searchInput.value.toLowerCase()) > -1 || !searchInput.value) {
+                    rows[i].style.display = "block";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+﻿.ls-search-container {
+    position: absolute;
+    background-color: #e4e4e4;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    max-height: 70vh;
+    overflow: auto;
+    z-index: 99999;
+
+    > * {
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    &.has-results {
+        .ls-search-default {
+            display: none !important;
+        }
+
+        .ls-search-searching {
+            display: none !important;
+        }
+    }
+
+    &.ls-search-hidden {
+        display: none;
+    }
+
+    &.searching {
+        .ls-search-default {
+            display: none;
+        }
+
+        .ls-search-searching {
+            text-align: center;
+            display: block;
+        }
+    }
+
+    .ls-search-default {
+        text-align: center;
+        line-height: 60px;
+        display: block;
+        background-color: #ffffff;
+        margin: 5px 5px 5px 5px;
+    }
+
+    .ls-search-searching {
+        display: none;
+        text-align: center;
+        line-height: 60px;
+        background-color: #ffffff;
+        margin: 5px 5px 5px 5px;
+    }
+
+    .ls-search-results-container {
+        padding: 0 5px;
+        background-color: #fff;
+    }
+
+    .ls-search-item {
+        background-color: #fff;
+    }
+
+    &::-webkit-scrollbar {
+        width: 14px;
+        height: 18px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        height: 6px;
+        border: 4px solid rgba(0, 0, 0, 0);
+        border-left: 1px solid rgba(0, 0, 0, 0);
+        -moz-background-clip: padding-box;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        -webkit-border-radius: 7px;
+        border-radius: 7px;
+        background-color: rgba(0, 0, 0, 0.15);
+        -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+        box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+    }
+
+    &::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+    &::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+}
