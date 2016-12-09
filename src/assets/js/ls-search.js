@@ -1,4 +1,6 @@
-﻿;(function (window, document) {
+﻿'use strict';
+
+;(function (window, document) {
     "use strict";
 
     var eventsTrigger = [],
@@ -486,9 +488,6 @@
                 LsFilter = filterFunction;
 
                 return this;
-            },
-            getFilters: function getFilters() {
-                return LsFilters;
             },
             clearFilter: function clearFilter() {
                 if (!!LsFilter && typeof LsFilter == 'function') {

@@ -489,9 +489,6 @@
 
                 return this;
             },
-            getFilters: function getFilters() {
-                return LsFilters;
-            },
             clearFilter: function clearFilter() {
                 if (!!LsFilter && typeof LsFilter == 'function') {
                     LsFilter();
