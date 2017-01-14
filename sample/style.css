@@ -9,6 +9,13 @@ body #main {
   width: 300px;
   margin: 0 auto;
 }
+html #main div.samples,
+body #main div.samples {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #e53b3b;
+}
 html #main #input-ls-search,
 body #main #input-ls-search {
   width: 100%;

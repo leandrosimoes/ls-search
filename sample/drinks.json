@@ -1,7 +1,7 @@
 {
 	"data": [
-    { "id": 1, "title":  "Wiskey" },
-    { "id": 2, "title":  "Vodka" },
-    { "id": 3, "title":  "Beer" }
+		{ "id": 1, "title":  "Wiskey" },
+		{ "id": 2, "title":  "Vodka" },
+		{ "id": 3, "title":  "Beer" }
 	]
 }

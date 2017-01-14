@@ -1,0 +1,27 @@
+{
+  "name": "ls-search",
+  "homepage": "https://github.com/leandrosimoes/ls-search",
+  "authors": [
+    "leandro <leandro.simoes@outlook.com>"
+  ],
+  "description": "Vanilla Javascript Search Plugin",
+  "main": {
+	"src/assets/js/ls-search.es5.min.js",
+	"src/assets/css/ls-search.min.css"
+  },
+  "keywords": [
+    "Vanilla",
+    "Javascript",
+    "Search",
+    "Plugin"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
