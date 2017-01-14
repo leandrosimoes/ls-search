@@ -6,7 +6,11 @@ A multiple search and filter plugin made with pure vanilla javascript with full 
 
 ## Hot to install?
 
-Just download and link into your page this assets:
+ Instal by bower:
+ 
+`bower install ls-search --save`
+
+Or just download and link into your page this assets:
 
 ### CSS:
 [ls-search.css](https://raw.githubusercontent.com/leandrosimoes/ls-search/master/src/assets/css/ls-search.css)
