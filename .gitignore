@@ -68,6 +68,10 @@ artifacts/
 *.pidb
 *.svclog
 *.scc
+*.sln
+Web.config
+compilerconfig.json
+compilerconfig.json.defaults
 
 # Chutzpah Test files
 _Chutzpah*
