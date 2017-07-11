@@ -20,7 +20,7 @@ or
 ### Javascript:
 [ls-search.js](https://raw.githubusercontent.com/leandrosimoes/ls-search/master/src/assets/js/ls-search.es5.js)
 or
-[ls-search.min.js](https://raw.githubusercontent.com/leandrosimoes/ls-search/master/src/assets/css/ls-search.es5.min.js)
+[ls-search.min.js](https://raw.githubusercontent.com/leandrosimoes/ls-search/master/src/assets/js/ls-search.es5.min.js)
 
 ## How it works?
 
